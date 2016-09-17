@@ -120,7 +120,7 @@ public class UniquePersonList implements Iterable<Person> {
         Collections.sort(internalList, new Comparator<Person>() {
             @Override
             public int compare(Person person1, Person person2) {
-                return person1.getName().toString().compareTo(person2.getName().toString());
+                return person1.getName().toString().compareToIgnoreCase(person2.getName().toString());
             }
         });
     }
